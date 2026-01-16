@@ -1,19 +1,18 @@
-# Crypto Wallet
+# NodeKey - Crypto Wallet
 
 A cryptocurrency wallet built with Flutter, supporting Ethereum and Polygon networks. Manage, send, and receive assets with a sleek, secure, and user-friendly interface.
 
 ## Features
 
-- **Multi-Network Support**: Ethereum, Polygon, Mumbai (testnet), and Goerli (testnet)
+- **Multi-Network Support**: Ethereum and Polygon Mainnets
 - **Secure Wallet Creation**: Generate wallets using BIP39 mnemonic phrases
 - **Transaction History**: View all your transactions on supported networks
-- **NFT Support**: View your NFT collection
 - **Secure Storage**: Uses Flutter Secure Storage for sensitive data
 - **Modern UI**: Beautiful dark theme with smooth animations
 
 ## Prerequisites
 
-- Flutter SDK (3.38.3 or compatible)
+- Flutter SDK (>= 3.0.0)
 - Android Studio / Xcode (for mobile development)
 - RPC URLs from Alchemy or QuickNode
 - API Keys from Etherscan and Polygonscan
@@ -23,8 +22,8 @@ A cryptocurrency wallet built with Flutter, supporting Ethereum and Polygon netw
 1. Clone the repository
 
    ```sh
-   git clone <your-repo-url>
-   cd crypto_wallet
+   git clone https://github.com/ana23-dot/nodeKey.git
+   cd nodeKey
    ```
 
 2. Install dependencies
@@ -41,9 +40,7 @@ A cryptocurrency wallet built with Flutter, supporting Ethereum and Polygon netw
    String get polygonscanApi => 'YOUR_POLYGONSCAN_API_KEY';
    String get etherscanApi => 'YOUR_ETHERSCAN_API_KEY';
    String get mainnetRPC => 'YOUR_ETHEREUM_MAINNET_RPC_URL';
-   String get mumbaiRPC => 'YOUR_MUMBAI_TESTNET_RPC_URL';
    String get polygonRPC => 'YOUR_POLYGON_MAINNET_RPC_URL';
-   String get goerliRPC => 'YOUR_GOERLI_TESTNET_RPC_URL';
    ```
 
 4. Add assets
@@ -51,9 +48,8 @@ A cryptocurrency wallet built with Flutter, supporting Ethereum and Polygon netw
    Place your assets in the following directories:
 
    - `assets/images/` - Logo and network images
-   - `assets/lotties/` - Lottie animation files
+   - `assets/lottie/` - Lottie animation files
    - `assets/icons/` - App icons
-   - `assets/abi/` - Contract ABIs (IERC20.json, IERC721.json)
 
 5. Run the application
    ```sh
@@ -70,6 +66,7 @@ lib/
 │   ├── dashboard/            # Wallet dashboard
 │   ├── splash/               # Splash screens
 │   ├── transaction_history/  # Transaction screens
+│   ├── qr/                   # QR Code scanning and showing
 │   └── Settings/             # Settings screens
 ├── services/
 │   ├── functions/            # Helper functions
@@ -84,7 +81,7 @@ lib/
 - **bip39/bip32**: Wallet generation and key derivation
 - **provider**: State management
 - **flutter_secure_storage**: Secure storage for sensitive data
-- **hive**: Local database
+- **shared_preferences**: Local settings storage
 - **lottie**: Animations
 - **google_fonts**: Typography
 
@@ -120,7 +117,7 @@ lib/
 
 - Never commit your API keys or RPC URLs to version control
 - Keep your recovery phrase secure and never share it
-- This is a development project - use testnets for testing
+- This is a development project
 - Always verify transactions before signing
 
 ## Roadmap
