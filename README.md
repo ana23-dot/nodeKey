@@ -42,11 +42,6 @@ lib/
 
 - **web3dart**: Ethereum blockchain interaction
 - **bip39/bip32**: Wallet generation and key derivation
-- **provider**: State management
-- **flutter_secure_storage**: Secure storage for sensitive data
-- **shared_preferences**: Local settings storage
-- **lottie**: Animations
-- **google_fonts**: Typography
 
 
 
