@@ -51,12 +51,3 @@ lib/
 
 
 
-## Roadmap
-
-- [ ] Portfolio generator
-- [ ] Live Market Feed
-- [ ] Add network feature for other EVM-based chains
-- [ ] Ability to interact with NFTs
-- [ ] Creation of more accounts from same recovery phrase
-- [ ] Multi-signature wallet support
-
