@@ -14,8 +14,7 @@ A cryptocurrency wallet built with Flutter, supporting Ethereum and Polygon netw
 
 - Flutter SDK (>= 3.0.0)
 - Android Studio / Xcode (for mobile development)
-- RPC URLs from Alchemy or QuickNode
-- API Keys from Etherscan and Polygonscan
+
 
 
 
